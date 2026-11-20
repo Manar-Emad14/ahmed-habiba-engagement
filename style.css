@@ -101,7 +101,8 @@ body.gate-locked {
   background: radial-gradient(circle, rgba(223, 186, 115, 0.3) 0%, rgba(244, 230, 230, 0.7) 50%, transparent 70%);
 }
 
-#sparkles-canvas {
+#sparkles-canvas,
+#petals-canvas {
   position: fixed;
   top: 0;
   left: 0;
@@ -109,6 +110,10 @@ body.gate-locked {
   height: 100%;
   pointer-events: none;
   z-index: 1;
+}
+
+#petals-canvas {
+  z-index: 2;
 }
 
 #confetti-canvas {
@@ -622,7 +627,25 @@ body.gate-locked {
   align-items: center;
 }
 
-/* Golden Arch Frame: border-radius 120px 120px 20px 20px */
+/* Elegant Botanical Floral SVG Dividers */
+.floral-divider-wrap {
+  width: 100%;
+  max-width: 340px;
+  margin: 6px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.95;
+  filter: drop-shadow(0 2px 6px rgba(224, 122, 137, 0.25));
+  pointer-events: none;
+}
+
+.floral-divider-svg {
+  width: 100%;
+  height: auto;
+}
+
+/* Golden & Rose-Gold Arch Frame: border-radius 120px 120px 20px 20px */
 .photo-arch-frame {
   position: relative;
   width: 100%;
@@ -630,15 +653,17 @@ body.gate-locked {
   aspect-ratio: 3 / 4;
   border-radius: 120px 120px 20px 20px;
   padding: 7px;
-  background: var(--gold-gradient);
-  box-shadow: var(--shadow-luxury), 0 0 20px rgba(197, 157, 95, 0.25);
+  background: linear-gradient(135deg, #dfba73 0%, #e8a598 35%, #c59d5f 70%, #dfba73 100%);
+  border: 1.5px solid rgba(244, 194, 194, 0.65);
+  box-shadow: 0 16px 42px rgba(158, 120, 61, 0.16), 0 0 28px rgba(244, 194, 194, 0.6), 0 0 14px rgba(223, 186, 115, 0.35);
   overflow: hidden;
   transition: var(--transition-smooth);
 }
 
 .photo-arch-frame:hover {
   transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 22px 48px rgba(158, 120, 61, 0.25), 0 0 30px rgba(223, 186, 115, 0.5);
+  box-shadow: 0 22px 50px rgba(158, 120, 61, 0.24), 0 0 35px rgba(244, 194, 194, 0.85), 0 0 25px rgba(223, 186, 115, 0.65);
+  border-color: rgba(244, 194, 194, 0.9);
 }
 
 .photo-inner-border {
@@ -707,9 +732,9 @@ body.gate-locked {
   background: var(--bg-card);
   backdrop-filter: blur(12px);
   border-radius: 28px;
-  border: 2px solid rgba(197, 157, 95, 0.45);
+  border: 2px solid rgba(223, 186, 115, 0.55);
   padding: 48px 28px;
-  box-shadow: var(--shadow-luxury);
+  box-shadow: 0 18px 45px rgba(158, 120, 61, 0.14), 0 0 28px rgba(244, 194, 194, 0.35);
   max-width: 680px;
   margin: 0 auto;
 }
@@ -890,9 +915,9 @@ body.gate-locked {
   background: var(--bg-card);
   backdrop-filter: blur(12px);
   border-radius: 28px;
-  border: 2px solid rgba(197, 157, 95, 0.4);
+  border: 2px solid rgba(232, 165, 152, 0.6);
   padding: 42px 24px;
-  box-shadow: var(--shadow-luxury);
+  box-shadow: 0 18px 45px rgba(158, 120, 61, 0.14), 0 0 32px rgba(244, 194, 194, 0.45);
   max-width: 680px;
   margin: 0 auto;
 }

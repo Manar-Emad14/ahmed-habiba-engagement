@@ -71,7 +71,8 @@
     // 1. Immediately trigger audio on user gesture
     startBackgroundMusic();
 
-    // 2. Play celebratory confetti burst
+    // 2. Play celebratory rose petal burst & confetti
+    triggerRosePetalBurst();
     triggerConfetti();
 
     // 3. Part the royal gate doors
@@ -421,6 +422,7 @@
 
     // Trigger celebration
     showToast('شكراً لك! تم إرسال تهنئتكم الكريمة بنجاح 💖');
+    triggerRosePetalBurst();
     triggerConfetti();
   }
 
@@ -563,7 +565,157 @@
   }
 
   // ==========================================
-  // 10. CELEBRATORY CONFETTI SYSTEM
+  // 10. ROMANTIC FALLING ROSE PETALS ENGINE
+  // ==========================================
+  const petalBurstList = [];
+
+  function drawPetalShape(ctx, p) {
+    ctx.save();
+    ctx.translate(p.x, p.y);
+    ctx.rotate((p.rotation * Math.PI) / 180);
+    ctx.scale(Math.cos(p.flipAngle), 1);
+    ctx.globalAlpha = Math.max(0, Math.min(1, p.opacity));
+
+    ctx.beginPath();
+    const s = p.size;
+    ctx.moveTo(0, -s);
+    ctx.bezierCurveTo(s * 0.75, -s * 0.75, s * 0.9, s * 0.45, 0, s);
+    ctx.bezierCurveTo(-s * 0.9, s * 0.45, -s * 0.75, -s * 0.75, 0, -s);
+
+    ctx.fillStyle = p.color;
+    ctx.shadowBlur = 4;
+    ctx.shadowColor = 'rgba(244, 194, 194, 0.45)';
+    ctx.fill();
+
+    // Delicate petal central highlight vein
+    ctx.beginPath();
+    ctx.moveTo(0, -s * 0.65);
+    ctx.quadraticCurveTo(s * 0.12, 0, 0, s * 0.65);
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.35)';
+    ctx.lineWidth = 0.8;
+    ctx.stroke();
+
+    ctx.restore();
+  }
+
+  function initRosePetalsCanvas() {
+    const canvas = document.getElementById('petals-canvas');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    let width = canvas.width = window.innerWidth;
+    let height = canvas.height = window.innerHeight;
+
+    window.addEventListener('resize', () => {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    });
+
+    const petalColors = [
+      '#f4c2c2', // Soft pastel pink
+      '#fae1dd', // Soft blush
+      '#f8b4b4', // Rosebud pink
+      '#fcd5ce', // Peach blush
+      '#dfba73'  // Metallic gold petal accent
+    ];
+
+    const continuousPetals = [];
+    const count = Math.min(36, Math.floor(window.innerWidth / 28));
+
+    for (let i = 0; i < count; i++) {
+      continuousPetals.push({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        size: Math.random() * 10 + 9, // 9px to 19px
+        speedY: Math.random() * 0.85 + 0.55,
+        swayAngle: Math.random() * Math.PI * 2,
+        swaySpeed: Math.random() * 0.02 + 0.012,
+        swayRadius: Math.random() * 1.5 + 0.8,
+        rotation: Math.random() * 360,
+        rotSpeed: (Math.random() - 0.5) * 1.2,
+        flipAngle: Math.random() * Math.PI,
+        flipSpeed: Math.random() * 0.03 + 0.012,
+        color: petalColors[Math.floor(Math.random() * petalColors.length)],
+        opacity: Math.random() * 0.35 + 0.45
+      });
+    }
+
+    function renderPetals() {
+      ctx.clearRect(0, 0, width, height);
+
+      // 1. Continuous falling romantic rose petals
+      continuousPetals.forEach(p => {
+        p.y += p.speedY;
+        p.swayAngle += p.swaySpeed;
+        p.x += Math.sin(p.swayAngle) * p.swayRadius;
+        p.rotation += p.rotSpeed;
+        p.flipAngle += p.flipSpeed;
+
+        if (p.y > height + 25) {
+          p.y = -25;
+          p.x = Math.random() * width;
+        }
+        if (p.x < -25) p.x = width + 25;
+        if (p.x > width + 25) p.x = -25;
+
+        drawPetalShape(ctx, p);
+      });
+
+      // 2. Extra burst rose petals
+      if (petalBurstList.length > 0) {
+        for (let i = petalBurstList.length - 1; i >= 0; i--) {
+          const bp = petalBurstList[i];
+          bp.vx *= bp.friction;
+          bp.vy *= bp.friction;
+          bp.vy += bp.gravity;
+          bp.x += bp.vx;
+          bp.y += bp.vy;
+          bp.rotation += bp.rotSpeed;
+          bp.flipAngle += bp.flipSpeed;
+          bp.opacity -= 0.0075;
+
+          if (bp.opacity <= 0 || bp.y > height + 40) {
+            petalBurstList.splice(i, 1);
+          } else {
+            drawPetalShape(ctx, bp);
+          }
+        }
+      }
+
+      requestAnimationFrame(renderPetals);
+    }
+
+    renderPetals();
+  }
+
+  function triggerRosePetalBurst() {
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+    const colors = ['#f4c2c2', '#fae1dd', '#f8b4b4', '#fcd5ce', '#dfba73', '#ffd1dc'];
+    const burstCount = 65;
+
+    for (let i = 0; i < burstCount; i++) {
+      const angle = Math.random() * Math.PI * 2;
+      const speed = Math.random() * 12 + 4;
+      petalBurstList.push({
+        x: width / 2,
+        y: height / 2,
+        size: Math.random() * 12 + 10,
+        vx: Math.cos(angle) * speed,
+        vy: Math.sin(angle) * speed - 4,
+        gravity: 0.22,
+        friction: 0.96,
+        rotation: Math.random() * 360,
+        rotSpeed: (Math.random() - 0.5) * 5,
+        flipAngle: Math.random() * Math.PI,
+        flipSpeed: Math.random() * 0.06 + 0.02,
+        color: colors[Math.floor(Math.random() * colors.length)],
+        opacity: 1
+      });
+    }
+  }
+
+  // ==========================================
+  // 11. CELEBRATORY CONFETTI SYSTEM
   // ==========================================
   function triggerConfetti() {
     const canvas = document.getElementById('confetti-canvas');
@@ -637,6 +789,7 @@
     renderBlessings();
     initScrollReveal();
     initSparklesCanvas();
+    initRosePetalsCanvas();
   });
 
 })();
