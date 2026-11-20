@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>دعوة خطوبة | أحمد &amp; حبيبة 💍</title>
+  
+  <!-- SEO & Social Sharing Meta Tags -->
+  <meta name="description" content="بقلوب ملؤها الحب والبهجة، يسرنا دعوتكم لمشاركتنا فرحة العمر بمناسبة خطوبتنا - الأربعاء 25 نوفمبر 2026 في قاعة كنوز.">
+  <meta name="theme-color" content="#fdf8f2">
+  <meta property="og:title" content="دعوة خطوبة: أحمد &amp; حبيبة 💍✨">
+  <meta property="og:description" content="يسرنا دعوتكم لمشاركتنا فرحة العمر بمناسبة خطوبتنا، وتكتمل سعادتنا بحضوركم الكريم.">
+  <meta property="og:image" content="photo1.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Google Fonts: Amiri (Verses & Poetry), Reem Kufi (Titles/Names), Cairo (Body & UI) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Cairo:wght@300;400;500;600;700;800&family=Reem+Kufi:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23c59d5f'%3E%3Cpath d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/%3E%3C/svg%3E">
+</head>
+<body>
+
+  <!-- Floating Golden Sparkle Particles Canvas -->
+  <canvas id="sparkles-canvas"></canvas>
+
+  <!-- Background Ambient Glow & Floral Watermarks -->
+  <div class="bg-ornament bg-ornament-top-right" aria-hidden="true"></div>
+  <div class="bg-ornament bg-ornament-bottom-left" aria-hidden="true"></div>
+
+  <!-- Background Music Audio Element -->
+  <audio id="bg-audio" preload="auto" loop playsinline>
+    <source src="song.mp3" type="audio/mp3">
+    <source src="public/song.mp3" type="audio/mp3">
+    متصفحكم لا يدعم تشغيل الملفات الصوتية.
+  </audio>
+
+  <!-- 1. FULL-SCREEN OPENING GATE OVERLAY -->
+  <div id="gate-overlay" class="gate-overlay" role="dialog" aria-modal="true" aria-label="بوابة دعوة الخطوبة">
+    <!-- Left & Right Gate Doors with Royal Islamic Arabesque Pattern -->
+    <div class="gate-door gate-door-right">
+      <div class="door-ornament-pattern"></div>
+      <div class="door-gold-border"></div>
+    </div>
+    <div class="gate-door gate-door-left">
+      <div class="door-ornament-pattern"></div>
+      <div class="door-gold-border"></div>
+    </div>
+
+    <!-- Center Envelope / Royal Invitation Plaque -->
+    <div class="gate-card">
+      <!-- Decorative Top Arabesque -->
+      <div class="gate-top-crest">
+        <svg viewBox="0 0 100 35" class="crest-svg" aria-hidden="true">
+          <path d="M50,2 C35,18 20,10 5,22 C18,24 32,25 45,28 C48,29 50,32 50,32 C50,32 52,29 55,28 C68,25 82,24 95,22 C80,10 65,18 50,2 Z" fill="url(#goldGrad)"/>
+          <circle cx="50" cy="9" r="4" fill="#dfba73"/>
+          <defs>
+            <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#dfba73"/>
+              <stop offset="50%" stop-color="#c59d5f"/>
+              <stop offset="100%" stop-color="#9e783d"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+
+      <div class="gate-bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+      
+      <div class="gate-rings-icon">
+        <svg viewBox="0 0 64 64" class="rings-svg" aria-hidden="true">
+          <!-- Interlocking Wedding Rings with Diamond Sparkle -->
+          <circle cx="26" cy="36" r="16" fill="none" stroke="url(#goldGrad)" stroke-width="4.5"/>
+          <circle cx="38" cy="36" r="16" fill="none" stroke="url(#goldGrad)" stroke-width="4.5"/>
+          <polygon points="38,12 34,18 42,18" fill="#fdf8f2" stroke="url(#goldGrad)" stroke-width="2"/>
+          <path d="M38,7 L39.5,11 L43.5,12.5 L39.5,14 L38,18 L36.5,14 L32.5,12.5 L36.5,11 Z" fill="#dfba73"/>
+        </svg>
+      </div>
+
+      <h1 class="gate-names">أحمد &amp; حبيبة</h1>
+      <p class="gate-subtitle">يسعدنا ويشرفنا دعوتكم لحضور حفل خطوبتنا المبارك</p>
+
+      <!-- Glowing Gold CTA Button -->
+      <button id="open-gate-btn" class="glow-gate-btn" type="button">
+        <span class="btn-shine"></span>
+        <span class="btn-text">✨ افتح الدعوة ✨</span>
+      </button>
+
+      <span class="gate-audio-hint">
+        <svg class="mini-music-icon" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+        </svg>
+        اضغط لفتح الدعوة والاستماع لموسيقى الحفل
+      </span>
+    </div>
+  </div>
+
+  <!-- FLOATING AUDIO CONTROLLER (Bottom-Left) -->
+  <button id="audio-pill-btn" class="audio-pill" type="button" aria-label="تشغيل أو إيقاف الموسيقى">
+    <div class="audio-equalizer" aria-hidden="true">
+      <span class="bar bar-1"></span>
+      <span class="bar bar-2"></span>
+      <span class="bar bar-3"></span>
+      <span class="bar bar-4"></span>
+    </div>
+    <span class="audio-pill-text" id="audio-pill-text">موسيقى الفرح</span>
+    <span class="audio-icon-state" id="audio-icon-state">
+      <svg class="audio-speaker-svg" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+      </svg>
+    </span>
+  </button>
+
+  <!-- MAIN SCROLLABLE CONTENT WRAPPER -->
+  <main id="main-content" class="main-wrapper">
+
+    <!-- 2. QURANIC HEADER & INTRO SECTION -->
+    <header class="section-quran reveal">
+      <div class="quran-container">
+        <!-- Ornate Islamic Header Motif -->
+        <div class="arabesque-divider" aria-hidden="true">
+          <svg viewBox="0 0 260 40" class="ornament-svg">
+            <path d="M130,5 C100,25 70,10 0,20 C70,22 100,15 130,35 C160,15 190,22 260,20 C190,10 160,25 130,5 Z" fill="url(#goldGrad)"/>
+            <circle cx="130" cy="20" r="5" fill="#c59d5f"/>
+            <circle cx="110" cy="20" r="2.5" fill="#9e783d"/>
+            <circle cx="150" cy="20" r="2.5" fill="#9e783d"/>
+          </svg>
+        </div>
+
+        <div class="bismillah-text">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+
+        <!-- Sacred Verse Card -->
+        <div class="quran-verse-card">
+          <div class="card-corner corner-tr"></div>
+          <div class="card-corner corner-tl"></div>
+          <div class="card-corner corner-br"></div>
+          <div class="card-corner corner-bl"></div>
+
+          <p class="quran-verse">
+            ﴿ وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً ﴾
+          </p>
+          <span class="quran-source">[سورة الروم: الآية 21]</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- 3. COUPLE PHOTO GALLERY (Arch-shaped golden frames) -->
+    <section class="section-couple reveal">
+      <div class="section-title-wrap">
+        <span class="section-badge">فرحة العمر</span>
+        <h2 class="section-heading">أجمل بداية لأحلى حكاية</h2>
+        <div class="gold-line-divider"></div>
+      </div>
+
+      <div class="couple-gallery-grid">
+        <!-- Frame 1: photo1.jpg -->
+        <div class="photo-card-wrap">
+          <div class="photo-arch-frame">
+            <div class="photo-inner-border"></div>
+            <img src="photo1.jpg" alt="صورة العريس والعروس أحمد وحبيبة" class="couple-img" loading="lazy" onerror="this.src='public/photo1.jpg'">
+            <div class="photo-overlay-shimmer"></div>
+          </div>
+          <div class="photo-name-tag">
+            <span class="tag-title">أحمد &amp; حبيبة</span>
+            <span class="tag-heart">💍</span>
+          </div>
+        </div>
+
+        <!-- Frame 2: photo2.jpg -->
+        <div class="photo-card-wrap">
+          <div class="photo-arch-frame">
+            <div class="photo-inner-border"></div>
+            <img src="photo2.jpg" alt="صورة تذكارية للخطوبة" class="couple-img" loading="lazy" onerror="this.src='public/photo2.jpg'">
+            <div class="photo-overlay-shimmer"></div>
+          </div>
+          <div class="photo-name-tag">
+            <span class="tag-title">معاً إلى الأبد</span>
+            <span class="tag-heart">✨</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. INVITATION DETAILS CARD -->
+    <section class="section-invitation reveal">
+      <div class="invitation-royal-card">
+        <!-- Ornate Corner Embellishments -->
+        <div class="card-corner corner-tr"></div>
+        <div class="card-corner corner-tl"></div>
+        <div class="card-corner corner-br"></div>
+        <div class="card-corner corner-bl"></div>
+
+        <div class="invitation-header-tag">
+          <span class="embossed-title">دَعْوَةُ خُطُوبَة</span>
+        </div>
+
+        <h1 class="couple-names-grand">
+          <span class="name-part">أحمد</span>
+          <span class="heart-pulse">❤</span>
+          <span class="name-part">حبيبة</span>
+        </h1>
+
+        <div class="ornate-separator" aria-hidden="true">
+          <span>❖</span>
+          <div class="sep-line"></div>
+          <span>💍</span>
+          <div class="sep-line"></div>
+          <span>❖</span>
+        </div>
+
+        <p class="invitation-message">
+          بقلوب ملؤها الحب والبهجة، يسرنا دعوتكم لمشاركتنا فرحة العمر بمناسبة خطوبتنا، وتكتمل سعادتنا بحضوركم الكريم.
+        </p>
+
+        <div class="romantic-footer-quote">
+          <span class="quote-symbol">«</span>
+          شريك روحي.. وبداية رحلتنا المباركة
+          <span class="quote-symbol">»</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. LIVE COUNTDOWN TIMER -->
+    <section class="section-countdown reveal">
+      <div class="countdown-card">
+        <h3 class="countdown-title">العد التنازلي لليوم المنتظر</h3>
+        <p class="countdown-subtitle">نترقب لقاءكم بكل شوق ومحبة</p>
+
+        <div class="timer-grid" id="timer-grid">
+          <!-- Days -->
+          <div class="timer-box">
+            <div class="timer-digit" id="timer-days">--</div>
+            <div class="timer-label">أيام</div>
+          </div>
+          <!-- Hours -->
+          <div class="timer-box">
+            <div class="timer-digit" id="timer-hours">--</div>
+            <div class="timer-label">ساعات</div>
+          </div>
+          <!-- Minutes -->
+          <div class="timer-box">
+            <div class="timer-digit" id="timer-minutes">--</div>
+            <div class="timer-label">دقائق</div>
+          </div>
+          <!-- Seconds -->
+          <div class="timer-box">
+            <div class="timer-digit" id="timer-seconds">--</div>
+            <div class="timer-label">ثواني</div>
+          </div>
+        </div>
+
+        <div id="countdown-finished-msg" class="countdown-finished-msg" style="display: none;">
+          🎉 حان وقت الفرحة! أهلاً وسهلاً بكم في حفلنا المبارك 🎉
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. EVENT & LOCATION CARD -->
+    <section class="section-location reveal">
+      <div class="location-card">
+        <div class="card-corner corner-tr"></div>
+        <div class="card-corner corner-tl"></div>
+        <div class="card-corner corner-br"></div>
+        <div class="card-corner corner-bl"></div>
+
+        <div class="section-title-wrap">
+          <span class="section-badge">تفاصيل المناسبة</span>
+          <h2 class="section-heading">الزمان والمكان</h2>
+          <div class="gold-line-divider"></div>
+        </div>
+
+        <div class="event-details-grid">
+          <!-- Date & Time Box -->
+          <div class="detail-tile">
+            <div class="tile-icon-circle">
+              <svg viewBox="0 0 24 24" class="tile-svg" fill="currentColor">
+                <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/>
+              </svg>
+            </div>
+            <div class="tile-content">
+              <h4 class="tile-title">الموعد المبارك</h4>
+              <p class="tile-text highlight-date">يوم الأربعاء، 25 نوفمبر 2026</p>
+              <p class="tile-subtext">الساعة 7:00 مساءً (07:00 م)</p>
+            </div>
+          </div>
+
+          <!-- Location Box -->
+          <div class="detail-tile">
+            <div class="tile-icon-circle">
+              <svg viewBox="0 0 24 24" class="tile-svg" fill="currentColor">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+              </svg>
+            </div>
+            <div class="tile-content">
+              <h4 class="tile-title">مقر الحفل</h4>
+              <p class="tile-text highlight-venue">قاعة كنوز</p>
+              <p class="tile-subtext">المسبك البحري، وراق العرب، الوراق</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Location Buttons -->
+        <div class="action-buttons-wrap">
+          <!-- Map Link Button -->
+          <a href="https://maps.app.goo.gl/VuAW5H2RXTXyENbi7?g_st=iwb" target="_blank" rel="noopener noreferrer" class="btn btn-gold-solid">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            </svg>
+            <span>عرض الموقع على الخريطة</span>
+          </a>
+
+          <!-- Add to Calendar Button (.ics download) -->
+          <button id="add-to-calendar-btn" class="btn btn-gold-outline" type="button">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/>
+            </svg>
+            <span>إضافة للتقويم (.ics)</span>
+          </button>
+
+          <!-- Copy Address Button -->
+          <button id="copy-address-btn" class="btn btn-ghost" type="button">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+            </svg>
+            <span>نسخ العنوان</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. INTERACTIVE GUESTBOOK / BLESSINGS WALL (RSVP) -->
+    <section class="section-guestbook reveal">
+      <div class="guestbook-card">
+        <div class="section-title-wrap">
+          <span class="section-badge">دفتر التهاني والتبريكات</span>
+          <h2 class="section-heading">شارك العروسين أطيب الأمنيات</h2>
+          <div class="gold-line-divider"></div>
+          <p class="section-subheading">كلماتكم الطيبة ودعواتكم الصادقة تسعد قلوبنا وتزين فرحتنا</p>
+        </div>
+
+        <!-- Add Blessing Form -->
+        <form id="guestbook-form" class="guestbook-form">
+          <div class="form-group">
+            <label for="guest-name" class="form-label">الاسم الكريم :</label>
+            <input type="text" id="guest-name" class="form-input" placeholder="اكتب اسمك الكريم هنا..." required maxlength="50" autocomplete="name">
+          </div>
+
+          <div class="form-group">
+            <label for="guest-message" class="form-label">تهنئتكم أو دعاؤكم المبارك :</label>
+            <textarea id="guest-message" class="form-textarea" placeholder="بارك الله لكما وبارك عليكما وجمع بينكما في خير..." required rows="3" maxlength="300"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-gold-solid btn-submit">
+            <span>إرسال التهنئة والمباركة</span>
+            <span class="btn-sparkle">💌</span>
+          </button>
+        </form>
+
+        <!-- Dynamic Blessings Wall -->
+        <div class="blessings-wall-container">
+          <div class="blessings-header">
+            <h4 class="blessings-count-title">
+              تهاني الأهل والأحباب (<span id="blessings-counter">0</span>)
+            </h4>
+          </div>
+          
+          <div id="blessings-list" class="blessings-list">
+            <div class="empty-blessings-msg" id="empty-blessings-msg">
+              <div class="empty-blessings-icon">💌</div>
+              <p class="empty-blessings-text">لا توجد تهاني بعد.. كن أول من يبارك لأحمد وحبيبة! ✨</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. WHATSAPP SHARE & ROYAL FOOTER -->
+    <footer class="section-footer reveal">
+      <div class="footer-card">
+        <div class="footer-crest" aria-hidden="true">
+          <svg viewBox="0 0 80 50" class="footer-crest-svg">
+            <path d="M40,5 C25,20 10,12 2,24 C14,26 28,27 38,30 C40,32 40,34 40,34 C40,34 40,32 42,30 C52,27 66,26 78,24 C70,12 55,20 40,5 Z" fill="url(#goldGrad)"/>
+            <circle cx="40" cy="18" r="3.5" fill="#c59d5f"/>
+          </svg>
+        </div>
+
+        <h3 class="footer-names">أحمد &amp; حبيبة</h3>
+        <p class="footer-blessing">«عقبال عندكم جميعاً، ونسعد بتشريفكم وحضوركم»</p>
+
+        <!-- WhatsApp Share Button -->
+        <a id="whatsapp-share-btn" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+          </svg>
+          <span>مشاركة بطاقة الدعوة عبر واتساب</span>
+        </a>
+
+        <div class="footer-bottom-line">
+          <span>صُممت بكل حب لخطوبة أحمد &amp; حبيبة | 2026</span>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- Interactive Toast Notification Container -->
+  <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+  <!-- Confetti Canvas for Celebratory Moments -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
